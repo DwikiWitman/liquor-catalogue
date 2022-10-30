@@ -82,9 +82,10 @@ export default {
   build: {
   },
 
+  ssr: false,
   buildDir: 'dist',
-	target: 'static',
-	generate: {
-	  fallback: true,
-	}
+  target: 'static',
+  generate: {
+    fallback: true,
+  }
 }
