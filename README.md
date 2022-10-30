@@ -1,4 +1,5 @@
 # liquor-catalogue
+![image](https://user-images.githubusercontent.com/17964815/198875134-de848cc5-f97b-40c7-9fee-46e3e1b4c064.png)
 
 ## Build Setup
 
