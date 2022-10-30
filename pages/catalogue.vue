@@ -45,7 +45,7 @@
                 <!-- Right side -->
                 <v-col
                 v-for="product in productdata.slice(Math.floor(Math.random() * productdata.length/2), productdata.length/2)"
-                :key="product.idDrink"
+                :key="product.idDrink + Math.random() + Math.random()"
                 >
                   <v-card
                     class="py-4"
