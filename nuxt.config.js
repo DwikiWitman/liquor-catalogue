@@ -82,7 +82,6 @@ export default {
   build: {
   },
 
-  ssr: false,
   buildDir: 'dist',
   target: 'static',
   generate: {
