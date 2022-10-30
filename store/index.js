@@ -73,10 +73,13 @@ export const actions = {
     commit
   }, selectedCatalogue) {
     let drinks = []
-    await axios.get('http://thecocktaildb.com/api/json/v1/1/filter.php?c=' + selectedCatalogue)
+    await axios.get('http://thecocktaildb.com/api/json/v1/1/filter.php?c=' + (selectedCatalogue ?? "Shake"))
       .then((response) => {
-        for (const drink of response.data.drinks) {
-          drinks.push(drink)
+        let drinksdatares = response.data.drinks
+        if (drinksdatares === null || drinksdatares === undefined) {
+          drinks = [...drinksdata]
+        } else {
+          drinks = [...drinksdatares]
         }
       })
       .catch((err) => {
@@ -92,7 +95,7 @@ export const actions = {
       drinkscomplete.push(drinkdesc)
     }
     commit('updateProductData', drinkscomplete)
-    console.log(drinkscomplete)
+    // console.log(drinkscomplete)
   },
 
   async getProductDetailData ({
